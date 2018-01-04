@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FriendFinder</title>
+
+    <!-- Import Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper purple darken-4">
+            <a href="index.html" class="brand-logo">
+                <i class="material-icons">cloud</i>FriendFinder</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="index.html">
+                        <i class="material-icons">home</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="survey.html">
+                        <i class="material-icons">assignment</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h4>Survey</h4>
+        </div>
+        <form class="col s12 center-align" action="/api/friends" method="POST">
+            <div class="row">
+                <div class="input-field col s6 offset-s3 center-align">
+                    <input id="name" type="text" class="validate" name="name">
+                    <label for="name">Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 offset-s3 center-align">
+                    <input id="photo" type="text" class="validate" name="photo">
+                    <label for="photo">Photo Link</label>
+                </div>
+            </div>
+            <div class="row">
+                <h6>I enjoy team sports.</h6>
+                <input class="with-gap" name="score0" type="radio" id="q1r1" value=1>
+                <label for="q1r1">Strongly Disagree</label>
+                <input class="with-gap" name="score0" type="radio" id="q1r2" value=2>
+                <label for="q1r2">Disagree</label>
+                <input class="with-gap" name="score0" type="radio" id="q1r3" value=3>
+                <label for="q1r3">Neutral</label>
+                <input class="with-gap" name="score0" type="radio" id="q1r4" value=4>
+                <label for="q1r4">Agree</label>
+                <input class="with-gap" name="score0" type="radio" id="q1r5" value=5>
+                <label for="q1r5">Strongly Agree</label>
+            </div>
+
+            <div class="row">
+                <h6>I believe that marijuana should be legalized.</h6>
+                <input class="with-gap" name="score1" type="radio" id="q2r1" value=1>
+                <label for="q2r1">Strongly Disagree</label>
+                <input class="with-gap" name="score1" type="radio" id="q2r2" value=2>
+                <label for="q2r2">Disagree</label>
+                <input class="with-gap" name="score1" type="radio" id="q2r3" value=3>
+                <label for="q2r3">Neutral</label>
+                <input class="with-gap" name="score1" type="radio" id="q2r4" value=4>
+                <label for="q2r4">Agree</label>
+                <input class="with-gap" name="score1" type="radio" id="q2r5" value=5>
+                <label for="q2r5">Strongly Agree</label>
+            </div>
+
+            <div class="row">
+                <h6>I enjoy partying and socializing with others.</h6>
+                <input class="with-gap" name="score2" type="radio" id="q3r1" value=1>
+                <label for="q3r1">Strongly Disagree</label>
+                <input class="with-gap" name="score2" type="radio" id="q3r2" value=2>
+                <label for="q3r2">Disagree</label>
+                <input class="with-gap" name="score2" type="radio" id="q3r3" value=3>
+                <label for="q3r3">Neutral</label>
+                <input class="with-gap" name="score2" type="radio" id="q3r4" value=4>
+                <label for="q3r4">Agree</label>
+                <input class="with-gap" name="score2" type="radio" id="q3r5" value=5>
+                <label for="q3r5">Strongly Agree</label>
+            </div>
+
+            <div class="row">
+                <h6>I am often the person that my friends go to when they need help.</h6>
+                <input class="with-gap" name="score3" type="radio" id="q4r1" value=1>
+                <label for="q4r1">Strongly Disagree</label>
+                <input class="with-gap" name="score3" type="radio" id="q4r2" value=2>
+                <label for="q4r2">Disagree</label>
+                <input class="with-gap" name="score3" type="radio" id="q4r3" value=3>
+                <label for="q4r3">Neutral</label>
+                <input class="with-gap" name="score3" type="radio" id="q4r4" value=4>
+                <label for="q4r4">Agree</label>
+                <input class="with-gap" name="score3" type="radio" id="q4r5" value=5>
+                <label for="q4r5">Strongly Agree</label>
+            </div>
+
+            <div class="row">
+                <h6>I love my job.</h6>
+                <input class="with-gap" name="score4" type="radio" id="q5r1" value=1>
+                <label for="q5r1">Strongly Disagree</label>
+                <input class="with-gap" name="score4" type="radio" id="q5r2" value=2>
+                <label for="q5r2">Disagree</label>
+                <input class="with-gap" name="score4" type="radio" id="q5r3" value=3>
+                <label for="q5r3">Neutral</label>
+                <input class="with-gap" name="score4" type="radio" id="q5r4" value=4>
+                <label for="q5r4">Agree</label>
+                <input class="with-gap" name="score4" type="radio" id="q5r5" value=5>
+                <label for="q5r5">Strongly Agree</label>
+            </div>
+
+            <div class="row">
+                <h6>I often dream about how I can make the world a better place.</h6>
+                <input class="with-gap" name="score5" type="radio" id="q6r1" value=1>
+                <label for="q6r1">Strongly Disagree</label>
+                <input class="with-gap" name="score5" type="radio" id="q6r2" value=2>
+                <label for="q6r2">Disagree</label>
+                <input class="with-gap" name="score5" type="radio" id="q6r3" value=3>
+                <label for="q6r3">Neutral</label>
+                <input class="with-gap" name="score5" type="radio" id="q6r4" value=4>
+                <label for="q6r4">Agree</label>
+                <input class="with-gap" name="score5" type="radio" id="q6r5" value=5>
+                <label for="q6r5">Strongly Agree</label>
+            </div>
+
+            <div class="row">
+                <h6>I prefer being alone rather than with others.</h6>
+                <input class="with-gap" name="score6" type="radio" id="q7r1" value=1>
+                <label for="q7r1">Strongly Disagree</label>
+                <input class="with-gap" name="score6" type="radio" id="q7r2" value=2>
+                <label for="q7r2">Disagree</label>
+                <input class="with-gap" name="score6" type="radio" id="q7r3" value=3>
+                <label for="q7r3">Neutral</label>
+                <input class="with-gap" name="score6" type="radio" id="q7r4" value=4>
+                <label for="q7r4">Agree</label>
+                <input class="with-gap" name="score6" type="radio" id="q7r5" value=5>
+                <label for="q7r5">Strongly Agree</label>
+            </div>
+
+            <div class="row">
+                <h6>I enjoy the outdoors.</h6>
+                <input class="with-gap" name="score7" type="radio" id="q8r1" value=1>
+                <label for="q8r1">Strongly Disagree</label>
+                <input class="with-gap" name="score7" type="radio" id="q8r2" value=2>
+                <label for="q8r2">Disagree</label>
+                <input class="with-gap" name="score7" type="radio" id="q8r3" value=3>
+                <label for="q8r3">Neutral</label>
+                <input class="with-gap" name="score7" type="radio" id="q8r4" value=4>
+                <label for="q8r4">Agree</label>
+                <input class="with-gap" name="score7" type="radio" id="q8r5" value=5>
+                <label for="q8r5">Strongly Agree</label>
+            </div>
+
+            <div class="row">
+                <h6>I am frequently late to planned events.</h6>
+                <input class="with-gap" name="score8" type="radio" id="q9r1" value=1>
+                <label for="q9r1">Strongly Disagree</label>
+                <input class="with-gap" name="score8" type="radio" id="q9r2" value=2>
+                <label for="q9r2">Disagree</label>
+                <input class="with-gap" name="score8" type="radio" id="q9r3" value=3>
+                <label for="q9r3">Neutral</label>
+                <input class="with-gap" name="score8" type="radio" id="q9r4" value=4>
+                <label for="q9r4">Agree</label>
+                <input class="with-gap" name="score8" type="radio" id="q9r5" value=5>
+                <label for="q9r5">Strongly Agree</label>
+            </div>
+
+            <div class="row">
+                <h6>I enjoy engaging in risky activity.</h6>
+                <input class="with-gap" name="score9" type="radio" id="q10r1" value=1>
+                <label for="q10r1">Strongly Disagree</label>
+                <input class="with-gap" name="score9" type="radio" id="q10r2" value=2>
+                <label for="q10r2">Disagree</label>
+                <input class="with-gap" name="score9" type="radio" id="q10r3" value=3>
+                <label for="q10r3">Neutral</label>
+                <input class="with-gap" name="score9" type="radio" id="q10r4" value=4>
+                <label for="q10r4">Agree</label>
+                <input class="with-gap" name="score9" type="radio" id="q10r5" value=5>
+                <label for="q10r5">Strongly Agree</label>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" id="submit" href="#modalResponse">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+
+    <div id="modalResponse" class="modal">
+        <div class="modal-content">
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Thanks!</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".modal").modal();
+            $("#submit").on("click", function () {
+                // Creates a variable called newFriend that will hold all of the information about our newFriend.
+                var newFriend = {
+                    Name: $('#name').val().trim(),
+                    photo: $('#photo').val().trim(),
+                    score: []
+                };
+                //For loop that pushes the values of the radio buttons to the score array. 
+                for (var i = 0; i < 10; i++) {
+                    var score = $('input[name=score' + i + ']:checked').val();
+                    (newFriend.score).push(score);
+                }
+                //currentURL picks the current location. We do not hardcore this since the URL will likely change once deployed.
+                var currentURL = window.location.origin;
+                //Ajax post request including the route, newFriend object and an alert that will soon be a modal. 
+                $.post(currentURL + "/api/friends", newFriend,
+                    function (data) {
+                        $(".modal-content").html(data);
+                        $("#modalResponse").modal('open');
+                    });
+                //Prevents us from leaving the survey page. 
+                return false;
+            });
+        })
+    </script>
+</body>
+
+</html>
